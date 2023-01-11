@@ -1,24 +1,42 @@
 const Events = () => {
-
     const handleMyEvent = (e) => {
-        console.log(e); //Obter informações do evento
-    }
-
+      console.log(e);
+      console.log("Ativou o evento!");
+    };
+  
+    const renderSomething = (x) => {
+      if (x) {
+        return <h1>Renderizando isso!</h1>;
+      } else {
+        return <h1>Também posso renderizar isso!</h1>;
+      }
+    };
+  
     return (
+      <div>
+        {/* evento */}
         <div>
-            <div>
-                <button onClick={handleMyEvent}>Clique aqui</button>
-            </div>
-            <div>
-                <button onClick={() => console.log("Clicou!!")}>Click que aqui também</button>
-            </div>
-            <button onClick={() => {
-                if(true) {
-                    console.log("isso não deveria existir =>")
-                }
-            }}>Clique aqui 2</button>
+          <button onClick={handleMyEvent}>Clique aqui!</button>
         </div>
-    )
-
-}
-export default Events;
+        {/* lógica no evento */}
+        <div>
+          <button onClick={() => console.log("Clicou")}>
+            Clique aqui também!
+          </button>
+          <button
+            onClick={() => {
+              if (true) {
+                console.log("Isso não deve existir xD");
+              }
+            }}
+          >
+            Clica aqui, por favor!
+          </button>
+        </div>
+        {renderSomething(true)}
+        {renderSomething(false)}
+      </div>
+    );
+  };
+  
+  export default Events;

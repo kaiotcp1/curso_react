@@ -6,7 +6,7 @@ import ConditionalRender from './components/ConditionalRender';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import ShowUserName from './components/ShowUserName';
-
+import Fragment from './components/Fragment';
 function App() {
   const name = "Kaio";
   //const [userName] = useState("Maria")
@@ -42,10 +42,12 @@ function App() {
         <CarDetails 
         brand={car.brand} 
         color={car.color} 
-        km={car.km} n
-        ewCar={car.newCar}
+        km={car.km} 
+        newCar={car.newCar}
         />
       ))}
+      {/* Fragment */}
+      <Fragment propFragment="Teste"/>
     </div>
   );
 }

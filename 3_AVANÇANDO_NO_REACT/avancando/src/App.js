@@ -1,5 +1,6 @@
 import './App.css';
 
+import React, { useState } from 'react';
 import City from './assets/city.jpg';
 import CarDetails from './components/CarDetails';
 import ConditionalRender from './components/ConditionalRender';
@@ -9,6 +10,8 @@ import ShowUserName from './components/ShowUserName';
 import Fragment from './components/Fragment';
 import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
+import Message from './components/Message';
+import ChangeMessageState from './components/ChangeMessageState';
 function App() {
   const name = "Kaio";
   //const [userName] = useState("Maria")
@@ -22,6 +25,12 @@ function App() {
   function showMessage() {
     console.log("Mensagem da função")
   }
+
+  const [message, setMessage] = useState("")
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  }
+
 
   return (
     <div className="App">
@@ -64,6 +73,9 @@ function App() {
       </Container>
       {/* Executar função */}
       <ExecuteFunction myFunction={showMessage}/>
+      {/* state lift */}
+      <Message msg={message}/>
+      <ChangeMessageState handleMessage={handleMessage}/>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import ShowUserName from './components/ShowUserName';
 import Fragment from './components/Fragment';
+import Container from './components/Container';
 function App() {
   const name = "Kaio";
   //const [userName] = useState("Maria")
@@ -48,6 +49,13 @@ function App() {
       ))}
       {/* Fragment */}
       <Fragment propFragment="Teste"/>
+      {/* Children */}
+      <Container myValue="Teste">
+        <p>E este é o conteúdo</p>
+      </Container>
+      <Container myValue="Teste 2">
+        <h5>Testando container</h5>
+      </Container>
     </div>
   );
 }

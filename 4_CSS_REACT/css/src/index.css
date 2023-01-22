@@ -18,3 +18,13 @@ code {
 h1 {
   color: red;
 }
+
+.red-title {
+  background-color: black;
+  color: aqua;
+}
+
+.title {
+  background-color: black;
+  color: white;
+}

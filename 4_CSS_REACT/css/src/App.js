@@ -10,6 +10,8 @@ function App() {
     <MyComponent/>
     <p>Este parágrafo é do App js</p>
     <p className="my-comp-paragraph">Este tbm é do component</p>
+    {/* Inline CSS */}
+    <p style={{color: "red", borderTop: "2px solid red", padding: "25px"}}>Este elemento foi estilizado de forma inline</p>
     </div>
   );
 }

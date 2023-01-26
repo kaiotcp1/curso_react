@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "name": "kauio",
+      "price": "2233",
+      "id": 4
+    },
+    {
+      "name": "kasdkasd",
+      "price": "2333",
+      "id": 5
+    }
+  ]
+}

@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Product from './pages/Product';
 import Info from './pages/Info';
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -23,8 +24,10 @@ function App() {
           <Route path='/about' element={<About />} />
           {/* Rota Dinâmica */}
           <Route path='/products/:id' element={<Product />} />
-          {/* Nested route */}
+          {/* Nested Route */}
           <Route path='/products/:id/info' element={<Info />} />
+          {/* No Match Route */}
+          <Route path='*' element={<NotFound />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
